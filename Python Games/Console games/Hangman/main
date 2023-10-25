@@ -1,0 +1,10 @@
+from Controller.Controller import Controller
+from Domain.Sentence import Validator
+from Repository.Repo import Repo
+from ui.ui import UI
+
+repo=Repo("sentences.txt")
+validator=Validator()
+controller = Controller(validator, repo)
+ui= UI(controller)
+ui.menu()
